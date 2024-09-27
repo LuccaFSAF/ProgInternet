@@ -3,47 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Olumor</title>
+    <style>
+        *{margin: 0px; padding: 0px; border: 1px solid black;}
+        p{
+            background-color: bisque;
+        }
+        .box{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        #box1{
+            background-color: pink;
+            border-right-style: dashed;
+            border-right-color: crimson;
+        }
+        #box2{
+            background-color: yellow;
+        }
+        #box3{
+            background-color: blueviolet;
+        }
+        #box4{
+            background-color: chartreuse;
+        }
+    </style>
 </head>
 <body>
+    <h1 class="titulo">PPI Programação para Internet</h1>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam quasi voluptatum saepe in obcaecati reprehenderit nemo. Placeat consectetur earum error delectus nam, nulla voluptate illo? Mollitia aspernatur beatae quo vitae?
+    </p>
+    <span>WEB</span>
+    <input type="text">
+    <h1 id="ht" class="titulo">HTML</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, labore fugiat cumque expedita delectus quasi illo sunt! Rerum odio officia unde sapiente ipsum, sunt, quaerat, id recusandae quidem consectetur amet.
+    </p>
+    <h1 id="css" class="titulo">
+        CSS ou Cascatin Style Sheet
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, error veritatis, minima rem ad laboriosam provident dolore nobis temporibus a nostrum voluptates sed qui consectetur et eum illum repellendus libero.
+    </p>
+    <h1>
+        JS
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti cum nihil qui doloribus! Nulla, in laborum unde, iste, esse possimus obcaecati ex ullam libero voluptate voluptatibus numquam? Ullam, aliquam nobis.
+    </p>
     <div>
-        <h1>Login</h1>
-        <form action="https://facebook.com" method="get">
-            <label for="query">Nome</label>
-            <input type="text" name="Nome">
-            <br><br>
-            <label for="query">Nascimento</label>
-            <input type="date" name="Data">
-            <br><br>
-            <label for="query">Email</label>
-            <input type="email" name="Email">
-            <br><br>
-            <input type="submit" value="Cadastrar">
-            <select name="Estados">
-                <option value="SC">Santa Catarina</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="SP">São Paulo</option>
-                <option value="PR">Parana</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="BA">Bahia</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="GO">Goias</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="AM">Amazonas</option>
-                <option value="ES">Espirito Santo</option>
-                <option value="AC">Acre</option>
-                <option value="AP">Amapa</option>
-                <option value="RR">Roraima</option>
-                <option value="TO">Tocantins</option>
-                <option value="PA">Pará</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="SE">Sergipe</option>
-                <option value="MA">Maranhão</option>
-                <option value="RD">Rondônia</option>
-                <option value="Al">Alagoas</option>
-        </select>
-    </form>
+        <div id="box1" class="box">box1</div>
+        <div id="box2" class="box">box2</div>
+        <div id="box3" class="box">box3</div>
+        <div id="box4" class="box">box4</div>
     </div>
 </body>
 </html>
