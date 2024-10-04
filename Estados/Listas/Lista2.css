@@ -1,28 +1,32 @@
-
 span{
-    border: 2px solid red;
+    border: 2px solid black;
     margin: 5px;
-    padding: 50px; background-color: yellow;
+    padding: 50px; background-color:red;
     display: inline-block;
     outline-offset: 0px;
+    position: fixed;
 }
 #box{
     position: fixed;
     right: 0px;
     top: 0px;
+    background-color: purple;
 }
 #box2{
     position: fixed;
     left: 0px;
     bottom: 0px;
+    background-color: green;
 }
 #box3{
     position: fixed;
     right: 0px;
     bottom: 0px;
+    background-color: yellow;
 }
 #box4{
     position: fixed;
     right: 45%;
     bottom: 45%;
+    background-color: grey;
 }

@@ -1,0 +1,28 @@
+html, body{
+    border: 2px;
+    margin: 5px;
+}
+span{
+    width: 250px;
+    height: 800px;
+    padding: 3px;
+    background-color: rgb(68, 68, 68);
+    display: inline-block;
+    position: fixed;
+}
+#txt{
+    color: white;
+    font-size: 25px;
+}
+#txt1{
+    color: white;
+    font-size: 20px;
+}
+#txt2{
+    color: white;
+    font-size: 15px;
+}
+#box{
+    display: inline-block;
+    position: fixed;
+}
