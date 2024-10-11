@@ -1,0 +1,10 @@
+1.a R: A internet interliga várias redes computadores através de linhas de telefones os 
+conectando, a WEB permite acessar as informações através da internet.
+
+b R: É um modelo que o computador/cliente chama um serviço do servidor, 
+recebendo uma resposta, por exemplo, o carregamento de uma nova guia no Google, onde o 
+cliente pede para acessar uma nova guia ou site e o servidor te concede o acesso ao domínio.
+
+c R: Uma tag é um fragmento de texto no código.
+
+d R: O HTML é uma linguagem para programação WEB
