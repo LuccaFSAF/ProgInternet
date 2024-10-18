@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{border: 1px solid black;}
+    .container{
+        display: grid;
+        min-height: 100vh;
+        grid-template-areas: "header header header header" 
+        "nav conten conten" 
+        "nav footer footer";
+    }
+
+    #box1{grid-area: header; background-color: rgb(216, 0, 216);}
+    #box2{grid-area: nav; background-color: lightgreen;}
+    #box3{grid-area: conten; background-color: coral;}
+    #box4{grid-area: footer; background-color: darkolivegreen;}
+</style>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Header</div>
+        <div class="box" id="box2">Nav</div>
+        <div class="box" id="box3">Content</div>
+        <div class="box" id="box4">Footer</div>
+    </div>
+</body>
+</html>

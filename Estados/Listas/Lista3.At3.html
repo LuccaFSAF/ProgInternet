@@ -5,7 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        display: flex;
+        background-color: rgb(150, 150, 150);
+        justify-content: center;
+    }
+    .container{
+        display: flex;
+        background-color: white;
+        flex-direction: column;
+        width: 50vw;
+        height: 50vh;
+        justify-content: space-evenly;
+    }
+    img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+    }
+    .colunas{
+        display: flex;
+    }
+    .nome{
+        display: flex;
+        align-items: start;
+    }
+    .state{
+        display: flex;
+        align-items: end;
+    }
+</style>
 <body>
-    
+    <div class="container">
+        <div class="panel" id="panel1">
+        <div class="colunas">
+            <img src="jaime.jfif" alt="">
+            <div class="nome">Jaime da Costa</div>
+            <div class="state">Porto Alegre - RS</div>
+        </div>
+        </div>
+        <div class="panel" id="panel2">
+            <img src="download.jfif" alt="">
+        </div>
+        <div class="panel" id="panel3">
+            <img src="Mulher.jfif" alt="">
+        </div>
+        <div class="panel" id="panel4">
+            <img src="Muie.jfif" alt="">
+        </div>
+    </div>
 </body>
 </html>
