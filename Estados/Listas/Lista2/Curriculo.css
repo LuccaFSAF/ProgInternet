@@ -22,7 +22,8 @@ span{
     color: white;
     font-size: 15px;
 }
-#box{
+#out{
     display: inline-block;
     position: fixed;
+    left: 21%;
 }
