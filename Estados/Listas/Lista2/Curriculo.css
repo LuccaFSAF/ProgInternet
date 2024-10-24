@@ -27,3 +27,15 @@ span{
     position: fixed;
     left: 21%;
 }
+a{
+    position: fixed;
+    display: inline-block;
+    left: 94%;
+    bottom: 49%;
+}
+y{
+    position: fixed;
+    display: inline-block;
+    left: 94%;
+    bottom: 20%;
+}
