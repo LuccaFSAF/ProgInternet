@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .container1{
+        display: flex;
+        border: 1px solid black;
+        height: 20vh;
+        width: 30vw;
+        align-items: center;
+        justify-content: center;
+    }
+    #box0{
+        width: 12vw;
+        height: 10vh;
+        border-radius: 50%;
+        background-color: red;
+    }
+    @media(max-width: 500px){
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    }
+    .container2{
+        display: flex;
+        height: 20vh;
+        width: 30vw;
+    }
+    .container3{
+        display: flex;
+        flex-direction: column;
+        height: 20vh;
+        width: 30vw;
+    }
+    #box4{
+        display: flex;
+        background-color: red;
+        height: 15vh;
+        width: 30vw;
+    }
+    #box5{
+        display: flex;
+        background-color: white;
+        height: 15vh;
+        width: 30vw;
+    }
+    #box6{
+        display: flex;
+        background-color: blue;
+        height: 15vh;
+        width: 30vw;
+    }
+    #box1{
+        display: flex;
+        background-color: green;
+        height: 20vh;
+        width: 30vw;
+    }
+    #box2{
+        display: flex;
+        background-color: white;
+        height: 20vh;
+        width: 30vw;
+    }
+    #box3{
+        display: flex;
+        background-color: red;
+        height: 20vh;
+        width: 30vw;
+    }
+    #box{
+        flex: 1;
+        background-size: 100%;
+        min-width: 100px; 
+    }
+    #box:hover{
+        flex: 2;
+    }
+</style>
+<body>
+    <div class="container1" id="box">
+        <div id="box0"></div>
+    </div>
+    <div class="container2" id="box">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+    <div class="container3" id="box">
+        <div id="box4"></div>
+        <div id="box5"></div>
+        <div id="box6"></div>
+    </div>
+</body>
+</html>

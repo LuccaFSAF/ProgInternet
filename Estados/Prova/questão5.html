@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        border: 1px solid black;
+    }
+    .container{
+        display: grid;
+        height: 100vh;
+        grid-template-areas: "Cont Menu Menu"
+                             "Cont Menu Menu"
+                             "Cont Chat Chat";
+    }
+    .cax{
+        position: absolute;
+        height: 3vh;
+        width: 54vw;
+    }
+    #box1{grid-area: Menu; background-color: red;}
+    #box2{grid-area: Cont; background-color: yellow;}
+    #box3{grid-area: Chat;}
+    @media(max-width: 500px){
+        .container{
+            display: grid;
+            min-height: 100vh;
+            grid-template-areas: "Menu Cont"
+                                 "Menu Cont"
+                                 "Chat Chat";
+        }
+    }
+    @media(min-width: 800px){
+        .container{
+            display: grid;
+            min-height: 100vh;
+            grid-template-areas: "Menu Menu Cont"
+                                 "Chat Chat Cont"
+                                 "Chat Chat Cont";
+        }
+    }
+    .op{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin: 10%;
+    }
+</style>
+<body>
+    <div class="container">
+        <div id="box1">Menu
+           <ul>Bebidas:
+            <li>Suco de Uva</li>
+            <li>Suco de Laranja</li>
+            <li>Coca-Cola</li>
+            <li>Guárana</li>
+            <li>Sprite</li>
+            <li>H2O</li>
+           </ul>
+           <br>
+           <ul>Salgados:
+                <li>Coxinha</li>
+                <li>Pastel</li>
+                <li>Pão de Queijo</li>
+                <li>Hamburguer</li>
+                <li>Misto Quente</li>
+                <li>Pão com Bolinho</li>
+           </ul>
+        </div>
+        <div id="box2">Opções
+            <div class="op">Formas de pagamento</div>
+            <div class="op">Contatos</div>
+            <div class="op">Conta</div>
+            <div class="op">Endereço</div>
+        </div>
+        <div id="box3">
+            <div class="cax">Atendimento ao Cliente:
+                <br><br><br>
+                <label for="query">Coméntario:</label>
+                <input type="text">
+                <br><br>
+                <input type="submit" name="Enviar">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
