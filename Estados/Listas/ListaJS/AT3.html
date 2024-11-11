@@ -10,13 +10,18 @@
         let s = "string";
         let a = 2;
         let b = true;
-        let ar = {};
-        let n = [];
+        let obj = {nome:"jogo", timer:2, fim:true};
+        let array = ["Saulo", "Herculano", "Fernando", "Carol"];
 
-        function fun(variável){
-            return typeof(variável);
-        }
-        alert(variável);
+        console.log(`O nome do curso é: ${nome} e o tipo do dado é 
+        ${typeof(obj.nome)}`);
+        console.log(`O tempo do curso é: ${timer} e o tipo do dado é 
+        ${typeof(obj.timer)}`);
+        console.log(`Aprovado no curso: ${fim} e o tipo do dado é 
+        ${typeof(obj.fim)}`);
+        console.log(`Os professores do curso: ${array} e o tipo do dado é 
+        ${typeof(array)}`);
+
     </script>
 </body>
 </html>
