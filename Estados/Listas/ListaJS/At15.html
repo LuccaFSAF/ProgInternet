@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<body>
+    <div >
+        <label for="min">Mínimo:</label>
+        <input id="min" type="text">
+        <br>
+        <label for="max">Máximo:</label>
+        <input id="max" type="text">
+    <br>
+        <button>Gerar Número Aleatório</button>
+        <p id="numSorteio">Número Aleatório: </p>
+    </div>
+    <script> 
+        let button = document.querySelector('button');
+        
+
+        button.addEventListener("click", altr);
+        function altr(){
+            let max = Number(document.querySelector("#max").value);
+            let min = Number(document.querySelector("#min").value); 
+            document.getElementById("numSorteio").innerHTML= `<p> Numero Aleatório: ${Math.floor(Math.random()*(max - min + 1)) +min}</p>`;
+        }
+        
+    </script>
+</body>
+</html>
