@@ -3,7 +3,7 @@ include_once("database.php");
 /* Função que insere usuarios no bd*/
 function insere_pessoa($nome, $email){
     $bd = conectar_bd();
-    $sql = "INSERT INTO usuario(nome, email) VALUES(?,?);";
+    $sql = "INSERT INTO crud.usuario(nome, email) VALUES(?,?);";
     $stmt = $bd->prepare($sql);
     $stmt->bindValue(1, $nome, PDO::PARAM_STR);
     $stmt->bindValue(2, $email, PDO::PARAM_STR);
@@ -24,7 +24,18 @@ function recupera_usuario(){
     $stmt = $bd->prepare($sql);
     $stmt->execute();
     $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    var_dump($resultado);
+    return $resultado;
+}
+recupera_usuario();
+
+function getUsuario($id){
+    $bd = conectar_bd();
+    $sql = "SELECT * from usuario where id = ?";
+    $stmt = $bd->prepare($sql);
+    $stmt->bindValue(1, $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $resultado;
 }
 
 ?>

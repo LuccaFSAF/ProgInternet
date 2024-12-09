@@ -7,7 +7,7 @@
         $database="crud";
         $host="localhost";
 
-        $bd=new PDO("mysql:host=$host;dtname=$database",   $user,  $pass);
+        $bd=new PDO("mysql:host=$host;dbname=$database",   $user,  $pass);
         $bd->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         if($bd){
             return $bd;
