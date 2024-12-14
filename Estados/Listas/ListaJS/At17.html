@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        height: 100vh;
+        margin: 0;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+    }
+</style>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+
+    <script>
+        function randomColor(){
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        function randominize(){
+            document.querySelectorAll('.box').forEach(box =>{
+                box.style.backgroundColor = randomColor();
+            });
+        }
+        document.addEventListener('keydown', randominize);
+    </script>
+</body>
+</html>
