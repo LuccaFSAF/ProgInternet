@@ -7,37 +7,40 @@
 </head>
 <style>
     body {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 10px;
-        height: 100vh;
-        margin: 0;
-    }
-    .box{
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+    }
+    .container{
+        display: flex;
+        border: 1px solid black;
+        height: 20vh;
+        width: 30vw;
         align-items: center;
-        border: 1px solid;
+        justify-content: center;
     }
 </style>
 <body>
-    <div class="box" id="box1"></div>
-    <div class="box" id="box2"></div>
-    <div class="box" id="box3"></div>
-    <div class="box" id="box4"></div>
-
+    <div class="container" id="box1"></div>
+    <div class="container" id="box2"></div>
+    <div class="container" id="box3"></div>
+    <div class="container" id="box4"></div>
+    <div class="container" id="box5"></div>
     <script>
         function randomColor(){
-            const letters = '0123456789ABCDEF';
+            let letters = '0123456789ABCDEF';
             let color = '#';
             for (let i = 0; i < 6; i++) {
                 color += letters[Math.floor(Math.random() * 16)];
             }
+            document.getElementById("box1").innerHTML=`<p> ${color}`;
+            document.getElementById("box2").innerHTML=`<p> ${color}`;
+            document.getElementById("box3").innerHTML=`<p> ${color}`;
+            document.getElementById("box4").innerHTML=`<p> ${color}`;
+            document.getElementById("box5").innerHTML=`<p> ${color}`;
             return color;
         }
         function randominize(){
-            document.querySelectorAll('.box').forEach(box =>{
+            document.querySelectorAll('.container').forEach(box =>{
                 box.style.backgroundColor = randomColor();
             });
         }
