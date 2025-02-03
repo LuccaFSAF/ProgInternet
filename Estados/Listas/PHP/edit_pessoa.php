@@ -29,10 +29,16 @@
     <form action="pessoa_controller.php" method="POST">
         <input type="text" name="id" id="id" hidden>
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" value="<?php echo$pessoa["nome"]?>">
+        <input type="text" name="nome" id="nome" value="<?php echo $pessoa["nome"]?>">
         <br>
         <label for="email">Email:</label>
-        <input type="text" name="email" id="email" value="<?php echo$pessoa["email"]?>">
+        <input type="text" name="email" id="email" value="<?php echo $pessoa["email"]?>">
+        <br>
+        <label for="tel">Telefone:</label>
+        <input type="text" name="tel" id="tel" value="<?php echo $pessoa["tel"]?>">
+        <br>
+        <label for="dtnasc">Data de Nascimento:</label>
+        <input type="text" name="dtnasc" id="dtnasc" value="<?php echo $pessoa["dtnasc"]?>">
         <input type="text" name="acao" value="editar" hidden>
         <br>
         <input type="submit" value="Salvar Alterações">

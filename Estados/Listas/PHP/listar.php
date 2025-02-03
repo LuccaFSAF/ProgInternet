@@ -15,6 +15,8 @@
             <td>ID:</td>
             <td>Nome:</td>
             <td>Email:</td>
+            <td>Telefone:</td>
+            <td>Data de Nascimento:</td>
         </tr>
         <?php 
         foreach ($lista_pessoa as $registro){
@@ -23,6 +25,8 @@
                 <td><a href="edit_pessoa.php?pessoa_id="><?php echo $registro["id"]?></td>
                 <td><?php echo $registro["nome"]?></td>
                 <td><?php echo $registro["email"]?></td>
+                <td><?php echo $registro["telefone"]?></td>
+                <td><?php echo $registro["datnasc"]?></td>
             </tr>
             <?php
         }
