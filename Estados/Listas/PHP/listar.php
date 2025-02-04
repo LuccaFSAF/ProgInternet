@@ -22,11 +22,12 @@
         foreach ($lista_pessoa as $registro){
             ?>
             <tr>
-                <td><a href="edit_pessoa.php?pessoa_id="><?php echo $registro["id"]?></td>
+                <td><?php echo $registro["id"]?></td>
                 <td><?php echo $registro["nome"]?></td>
                 <td><?php echo $registro["email"]?></td>
                 <td><?php echo $registro["telefone"]?></td>
                 <td><?php echo $registro["datnasc"]?></td>
+                <td><a href="edit_pessoa.php?pessoa_id=<?php echo $registro["id"]?>"> Editar</a></td>
             </tr>
             <?php
         }

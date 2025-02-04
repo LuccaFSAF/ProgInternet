@@ -34,11 +34,11 @@
         <label for="email">Email:</label>
         <input type="text" name="email" id="email" value="<?php echo $pessoa["email"]?>">
         <br>
-        <label for="tel">Telefone:</label>
-        <input type="text" name="tel" id="tel" value="<?php echo $pessoa["tel"]?>">
+        <label for="telefone">Telefone:</label>
+        <input type="text" name="telefone" id="telefone" value="<?php echo $pessoa["telefone"]?>">
         <br>
-        <label for="dtnasc">Data de Nascimento:</label>
-        <input type="text" name="dtnasc" id="dtnasc" value="<?php echo $pessoa["dtnasc"]?>">
+        <label for="datnasc">Data de Nascimento:</label>
+        <input type="text" name="datnasc" id="datnasc" value="<?php echo $pessoa["datnasc"]?>">
         <input type="text" name="acao" value="editar" hidden>
         <br>
         <input type="submit" value="Salvar Alterações">

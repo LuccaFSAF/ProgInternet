@@ -16,6 +16,16 @@ if(isset($_POST["acao"])&& $_POST["acao"]== "cadastrar"){
     }
 }
 if(isset($_POST["acao"])&& $_POST["acao"]=="editar"){
-    
+    if(isset($_POST["nome"]) &&  isset($_POST["email"]) && isset($_POST["telefone"]) && isset($_POST["datnasc"]) && isset($_POST["id"])){
+        $nome=$_POST["nome"];
+        $email=$_POST["email"];
+        $tel=$_POST["telefone"];
+        $dat=$_POST["datnasc"];
+        $id=$_POST["id"];
+        update_pessoa($nome, $email, $tel, $dat, $id);
+        header("Location: edit_pessoa.php");
+    }else{
+        echo"Erro ao alterar";
+    }
 }
 ?>

@@ -32,9 +32,9 @@ recupera_usuario();
 
 function getUsuario($id){
     $bd = conectar_bd();
-    $sql = "SELECT * from usuario where id = ?";
+    $sql = "SELECT * from usuario where id = :id";
     $stmt = $bd->prepare($sql);
-    $stmt->bindValue(1, $id, PDO::PARAM_INT);
+    $stmt->bindParam(":id", $id);
     $stmt->execute();
     $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
     return $resultado;
@@ -51,5 +51,17 @@ function delete_pessoa($id){
     }catch(PDOException $e){
         echo "Erro ao deletar". $e->getMessage();
     }
+}
+function update_pessoa($nome, $email, $tel, $dat, $id){
+    $bd = conectar_bd();
+    $sql = "UPDATE crud.usuario SET nome=:nome, email=:email, telefone=:telefone, datnasc=:datnasc WHERE id=:id;";
+    $stmt = $bd->prepare($sql);
+    $stmt->blindParam(":nome", $nome);
+    $stmt->blindParam(":email", $email);
+    $stmt->blindParam(":telefone", $tel);
+    $stmt->blindParam(":datnasc", $dat);
+    $stmt->blindParam(":id", $id);
+    $stmt->execute();
+    return $stmt->rowCount();
 }
 ?>
