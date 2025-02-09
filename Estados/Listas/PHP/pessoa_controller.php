@@ -28,4 +28,11 @@ if(isset($_POST["acao"])&& $_POST["acao"]=="editar"){
         echo"Erro ao alterar";
     }
 }
+if(isset($_POST["acao"])&& $_POST["acao"]=="Deletar"){
+    if(isset($_POST["id"])){
+        $id=$_POST["id"];
+        delete_pessoa( $id );
+        header("Location: edit_pessoa.php");
+    }
+}
 ?>

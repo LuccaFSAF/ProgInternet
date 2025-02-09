@@ -41,6 +41,7 @@
         <input type="text" name="datnasc" id="datnasc" value="<?php echo $pessoa["datnasc"]?>">
         <input type="text" name="acao" value="editar" hidden>
         <br>
+        <input type="submit" name="acao" value="Deletar">
         <input type="submit" value="Salvar Alterações">
     </form>
     </fieldset>
