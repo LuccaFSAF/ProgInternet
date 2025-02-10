@@ -27,7 +27,7 @@
     <h1>Edição  Pessoa</h1>
     <fieldset>
     <form action="pessoa_controller.php" method="POST">
-        <input type="text" name="id" id="id" hidden>
+        <input type="text" name="id" id="id" value="<?php echo $pessoa["id"]?>" hidden>
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome" value="<?php echo $pessoa["nome"]?>">
         <br>
@@ -41,7 +41,6 @@
         <input type="text" name="datnasc" id="datnasc" value="<?php echo $pessoa["datnasc"]?>">
         <input type="text" name="acao" value="editar" hidden>
         <br>
-        <input type="submit" name="acao" value="Deletar">
         <input type="submit" value="Salvar Alterações">
     </form>
     </fieldset>

@@ -28,10 +28,13 @@
                 <td><?php echo $registro["telefone"]?></td>
                 <td><?php echo $registro["datnasc"]?></td>
                 <td><a href="edit_pessoa.php?pessoa_id=<?php echo $registro["id"]?>"> Editar</a></td>
+                <td><a href="delete.php?id=<?php echo $registro["id"]?>">Deletar</a></td>
             </tr>
             <?php
         }
         ?>
     </table>
+    <a href="exit.php">Sair</a>
+    <a href="formulario.add.html">cadastrar</a>
 </body>
 </html>

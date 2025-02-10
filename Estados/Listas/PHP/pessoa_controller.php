@@ -23,7 +23,7 @@ if(isset($_POST["acao"])&& $_POST["acao"]=="editar"){
         $dat=$_POST["datnasc"];
         $id=$_POST["id"];
         update_pessoa($nome, $email, $tel, $dat, $id);
-        header("Location: edit_pessoa.php");
+        header("Location: listar.php");
     }else{
         echo"Erro ao alterar";
     }
@@ -32,7 +32,7 @@ if(isset($_POST["acao"])&& $_POST["acao"]=="Deletar"){
     if(isset($_POST["id"])){
         $id=$_POST["id"];
         delete_pessoa( $id );
-        header("Location: edit_pessoa.php");
+        header("Location: listar.php");
     }
 }
 ?>

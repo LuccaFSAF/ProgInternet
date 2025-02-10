@@ -42,25 +42,25 @@ function getUsuario($id){
 
 function delete_pessoa($id){
     $bd = conectar_bd();
-    $sql = "DELETE FROM crud.usuario WHERE id = ?;";
+    $sql = "DELETE FROM crud.usuario WHERE id = :id;";
     $stmt = $bd->prepare($sql);
-    $stmt->blindValue(1, $id, PDO::PARAM_INT);
-    try{
-        $stmt->execute();
-        echo "Usuario deletado!";
-    }catch(PDOException $e){
-        echo "Erro ao deletar". $e->getMessage();
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+    if($stmt->rowCount() > 0){
+        return true;
+    }else{
+        return false;
     }
 }
 function update_pessoa($nome, $email, $tel, $dat, $id){
     $bd = conectar_bd();
     $sql = "UPDATE crud.usuario SET nome=:nome, email=:email, telefone=:telefone, datnasc=:datnasc WHERE id=:id;";
     $stmt = $bd->prepare($sql);
-    $stmt->blindParam(":nome", $nome);
-    $stmt->blindParam(":email", $email);
-    $stmt->blindParam(":telefone", $tel);
-    $stmt->blindParam(":datnasc", $dat);
-    $stmt->blindParam(":id", $id);
+    $stmt->bindParam(":nome", $nome);
+    $stmt->bindParam(":email", $email);
+    $stmt->bindParam(":telefone", $tel);
+    $stmt->bindParam(":datnasc", $dat);
+    $stmt->bindParam(":id", $id);
     $stmt->execute();
     return $stmt->rowCount();
 }
